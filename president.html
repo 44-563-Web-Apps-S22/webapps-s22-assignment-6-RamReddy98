@@ -29,7 +29,7 @@
                 font-family: 'Times New Roman', Times, serif;
             }
             </style>
-    <body>
+<body>
        
        <h2>President guess by Ram Reddy. Boppidi </h2>
     
@@ -44,7 +44,7 @@
         
             <input type="button" onclick="checkGuess()" value="Check the guess">
         </form>
-    </div>
+       </div>
     <div class = "container">
         <p id="result">This text will be replaced </p>
     </div>
@@ -72,11 +72,12 @@
             if (cntNew >=3){
                 if (wrong >=3){
                     incorrectcheckGuess()
+                    function lock(){
+            alert("Sorry, game over.")
                 }
             }
         }
-        function lock(){
-            alert("Sorry, game over.")
+            
     }
     </script>
     
@@ -105,4 +106,4 @@
     </div>
 
 </body>
-</html> 
+</html>
