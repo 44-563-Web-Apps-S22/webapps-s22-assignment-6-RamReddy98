@@ -53,33 +53,32 @@
     let wrong = 0;
     var cntNew = 0;
     function checkGuess (){
-        console.log("Getting form values")
-        password = document.getElementById("form_age").value
-        text = document.getElementById("form_nick").value
-        //confirmed = confirm("Are these the values? "+ age +" and "+ nick)
-        
-        out = document.getElementById("result")
-        if(password==text){
-            cntNew = 0;
-            correct = correct + 1;
-            out.innerHTML = "correct : " + correct +"wrong : " + wrong
-            alert("You got it right")  
-        } else {
-            cntNew = cntNew + 1;
-            wrong = wrong + 1;
-            out.innerHTML = "correct : " + correct + "wrong : " + wrong
-            alert("Wrong President")
-            if (cntNew >=3){
-                if (wrong >=3){
-                    incorrectcheckGuess()
-                    
+    console.log("Getting form values")
+    password = document.getElementById("form_age").value
+    text = document.getElementById("form_nick").value
+    //confirmed = confirm("Are these the values? "+ age +" and "+ nick)
+    
+    out = document.getElementById("result")
+    if(password==text){
+        cntNew = 0;
+        correct = correct + 1;
+        out.innerHTML = "correct : " + correct +"wrong : " + wrong
+        alert("You got it right")  
+    } else {
+        cntNew = cntNew + 1;
+        wrong = wrong + 1;
+        out.innerHTML = "correct : " + correct + "wrong : " + wrong
+        alert("Wrong President")
+        if (cntNew >=3){
+            if (wrong >=3){
+                incorrectcheckGuess()
             }
         }
-      }
-      function lock(){
-            alert("Sorry, game over.")
-                }
     }
+}
+function incorrectcheckGuess(){
+    alert("Sorry, game over.")
+}
     </script>
     
     <div>
